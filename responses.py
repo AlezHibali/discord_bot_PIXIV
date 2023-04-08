@@ -23,7 +23,9 @@ def handle_response(message, K):
         # Get the search term from the message
         arg = p_message[5:]
 
-        if arg in ['day', 'week']:
+        if arg in ['day', 'week', 'month', 'day_male', 'day_female', 'week_original',\
+                   'week_rookie', 'day_r18', 'day_male_r18', 'day_female_r18',\
+                    'week_r18', 'week_r18g']:
             out = rank_pixiv(arg=arg, k = K.value)
         else:
             out = "`Argument should be 'day' or 'week'`"
